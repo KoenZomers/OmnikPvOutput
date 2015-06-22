@@ -4,6 +4,8 @@ Allows reading of live statistics from an Omnik Solar Inverter with WiFi module 
 
 ## Setup steps
 
+I'm assuming here you already have your Omnik Solar Inverter with WiFi module configured to be able to access your WiFi network and you know it's IP address.
+
 1. Create an account at [PVOutput.org](http://www.pvoutput.org) if you haven't done so already
 2. Under [Settings](http://pvoutput.org/account.jsp) at the PVOutput website, at the bottom in the Registered Systems section, add one or more Solar Panel sets, if you haven't done so already
 3. Take note of the System Id assigned to your registered systems. We'll need these later on.
