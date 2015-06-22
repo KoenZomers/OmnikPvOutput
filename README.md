@@ -17,6 +17,10 @@ I'm assuming here you already have your Omnik Solar Inverter with WiFi module co
 9. Run the Console Application by starting KoenZomers.Omnik.PVOutput.ConsoleApp.exe. It will connect to your Omnik Solar Inverter with WiFi module, retrieve its statistics and post them to PVOutput
 10. On the PVOutput.org website under Live (middle of the page at the left) you should see the entries coming in. Note that it only accepts a post once every 5 minutes at most, so if you run it several times after each other, you won't see the result show up on the website even though the API responded with OK.
 
+You can schedule this tool to run every five minutes using Windows Scheduler. If you have multiple Omnik Solar Inverters, just create a copy of the tool in separate folders, adjust the KoenZomers.Omnik.PVOutput.ConsoleApp.exe.config files of each of them with the correct configuration and schedule them to run at an interval.
+
+In case you don't want any 24/7 Windows machine to be running to execute this code, another option could be to have it run in Microsoft Azure. For free you can have it run there as an Azure Website Webjob once every hour. If you want it more often than that (i.e. every five minutes), you need to scale up the Azure Scheduler component in your Azure subscription from free to at least standard level which does result in costs being charged to you.
+
 ## Feedback
 
 Questions/comments/bug reports? Feel free to share them with me.
