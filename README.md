@@ -21,7 +21,7 @@ You can schedule this tool to run every five minutes using Windows Scheduler. If
 
 In case you don't want any 24/7 Windows machine to be running to execute this code, another option could be to have it run in Microsoft Azure. For free you can have it run there as an Azure Website Webjob once every hour. If you want it more often than that (i.e. every five minutes), you need to scale up the Azure Scheduler component in your Azure subscription from free to at least standard level which does result in costs being charged to you.
 
-##Version History
+## Version History
 
 Version 1.0.1.0 - August 17, 2017
 
