@@ -2,6 +2,10 @@
 
 Allows reading of live statistics from an Omnik Solar Inverter with WiFi module and posting the statistics to PVOutput.org.
 
+## Download
+
+[Download the latest version](../../releases/latest)
+
 ## Setup steps
 
 I'm assuming here you already have your Omnik Solar Inverter with WiFi module configured to be able to access your WiFi network and you know it's IP address.
@@ -23,7 +27,7 @@ In case you don't want any 24/7 Windows machine to be running to execute this co
 
 ## Version History
 
-Version 1.0.1.0 - August 17, 2017
+Version 1.0.1.0 - August 17, 2017 [download](../../releases/tag/1.0.1.0)
 
 - Added showing details on the pull failing to the console output
 - Replaced get properties with lambda expressions
