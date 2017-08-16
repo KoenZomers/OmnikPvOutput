@@ -27,7 +27,7 @@ In case you don't want any 24/7 Windows machine to be running to execute this co
 
 ## Version History
 
-Version 1.0.1.0 - August 17, 2017 [download](../../releases/tag/1.0.1.0)
+[Version 1.0.1.0](../../releases/tag/1.0.1.0) - August 17, 2017 
 
 - Added showing details on the pull failing to the console output
 - Replaced get properties with lambda expressions
