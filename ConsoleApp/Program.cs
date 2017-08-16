@@ -26,34 +26,22 @@ namespace KoenZomers.Omnik.PVOutput.ConsoleApp
         /// <summary>
         /// Gets the Omnik Solar Inverter network address
         /// </summary>
-        private static string OmnikInverterAddress
-        {
-            get { return ConfigurationManager.AppSettings["OmnikAddress"]; }
-        }
+        private static string OmnikInverterAddress => ConfigurationManager.AppSettings["OmnikAddress"];
 
         /// <summary>
         /// Gets the Omnik Solar Inverter Serial
         /// </summary>
-        private static string OmnikInverterSerialNumber
-        {
-            get { return ConfigurationManager.AppSettings["OmnikSerial"]; }
-        }
+        private static string OmnikInverterSerialNumber => ConfigurationManager.AppSettings["OmnikSerial"];
 
         /// <summary>
         /// Gets the API Key to use to communicate with the PV Output webservice
         /// </summary>
-        private static string PvOutputApiKey
-        {
-            get { return ConfigurationManager.AppSettings["PVOutputApiKey"]; }
-        }
+        private static string PvOutputApiKey => ConfigurationManager.AppSettings["PVOutputApiKey"];
 
         /// <summary>
         /// Gets the System ID of the solar set as registered with PV Output
         /// </summary>
-        private static string PvOutputSystemId
-        {
-            get { return ConfigurationManager.AppSettings["PVOutputSystemId"]; }
-        }
+        private static string PvOutputSystemId => ConfigurationManager.AppSettings["PVOutputSystemId"];
 
         #endregion
 
@@ -78,6 +66,9 @@ namespace KoenZomers.Omnik.PVOutput.ConsoleApp
 
             // Attach an event handler to the event where statistics have been received from the Omnik Solar Inverter
             _controller.OmnikStatisticsAvailable += OmnikStatisticsAvailable;
+
+            // Register to the event which will tell us if the pull failed
+            _controller.DataPullSessionFailed += PullDataFailed;
 
             Console.WriteLine("Fetching data from Omnik Solar Inverter with serial number {0} from {1}", OmnikInverterSerialNumber, OmnikInverterAddress);
 
@@ -193,6 +184,14 @@ namespace KoenZomers.Omnik.PVOutput.ConsoleApp
                 var response = result.Content.ReadAsStringAsync();
                 Console.WriteLine(response.Result);
             }
+        }
+
+        /// <summary>
+        /// Triggered when a pull operation fails
+        /// </summary>
+        static void PullDataFailed(string omnikAddress, int omnikPort, string serialNumber, string reason)
+        {
+            Console.WriteLine("Failed to pull data from Omnik at {0}:{1} using serialnumber '{2}'. Reason: '{3}'", omnikAddress, omnikPort, serialNumber, reason);
         }
 
         #endregion
