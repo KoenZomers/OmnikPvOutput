@@ -14,7 +14,7 @@ I'm assuming here you already have your Omnik Solar Inverter with WiFi module co
 2. Under [Settings](http://pvoutput.org/account.jsp) at the PVOutput website, at the bottom in the Registered Systems section, add one or more Solar Panel sets, if you haven't done so already
 3. Take note of the System Id assigned to your registered systems. We'll need these later on.
 4. Right above the Registered Systems section you'll find the API Settings section. Make sure API Access is set to Enabled and you've generated an API Key. Take note of this API Key as we'll need it later on.
-5. [Download the console application](https://github.com/KoenZomers/OmnikPvOutput/raw/master/KoenZomers.Omnik.PVOutput.zip)
+5. [Download the console application](../../releases/latest)
 6. Extract the files to some location on your machine
 7. Open the KoenZomers.Omnik.PVOutput.ConsoleApp.exe.config file in your favorite text editor (i.e. notepad)
 8. You'll see XML inside this file. Fill out each of the value arguments within the appSettings section, so OmnikAddress, OmnikSerial, PVOutputApiKey, PvOutputSystemId. The comments in the XML describe where you can get these values from. PvOutputSystemId is the value from step 3 above, PVOutputApiKey is the value from step 4 above.
