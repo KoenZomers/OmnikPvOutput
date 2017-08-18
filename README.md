@@ -27,6 +27,11 @@ In case you don't want any 24/7 Windows machine to be running to execute this co
 
 ## Version History
 
+[Version 1.0.2.0](../../releases/tag/1.0.2.0) - August 18, 2017
+
+- Fixed issue where some Omnik converters would not return data
+- Compiled against the .NET 4.5.2 framework now as earlier versions are no longer supported by Microsoft
+
 [Version 1.0.1.0](../../releases/tag/1.0.1.0) - August 17, 2017 
 
 - Added showing details on the pull failing to the console output
